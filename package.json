@@ -1,0 +1,22 @@
+{
+  "name": "data-on-remove",
+  "version": "1.0.0",
+  "description": "A custom Datastar attribute plugin that runs an expression when an element is removed from the DOM.",
+  "keywords": ["datastar", "attribute", "plugin", "remove"],
+  "homepage": "https://github.com/Regaez/data-on-remove#readme",
+  "bugs": {
+    "url": "https://github.com/Regaez/data-on-remove/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Regaez/data-on-remove.git"
+  },
+  "license": "MIT",
+  "author": "Thomas Threadgold",
+  "type": "module",
+  "main": "data-on-remove.js",
+  "scripts": {
+    "build": "npx esbuild --minify --outfile=data-on-remove.min.js data-on-remove.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
