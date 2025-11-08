@@ -2,6 +2,8 @@
 
 A custom [Datastar](https://data-star.dev) attribute plugin that runs an expression when the element is removed from the DOM.
 
+[Live demo](https://threadgold.nz/demos/data-on-remove)
+
 ```html
 <button
   data-on:click="el.remove()"
@@ -11,9 +13,7 @@ A custom [Datastar](https://data-star.dev) attribute plugin that runs an express
 </button>
 ```
 
-[Live demo](https://threadgold.nz/demos/data-on-remove)
-
-## Get started
+## Getting started
 
 The plugin expects you to provide an [import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) that specifies the location of the `datastar` module. For example:
 
@@ -28,7 +28,7 @@ The plugin expects you to provide an [import map](https://developer.mozilla.org/
 <script type="module" src="https://cdn.jsdelivr.net/gh/regaez/data-on-remove@1.0.0/data-on-remove.min.js"></script>
 ```
 
-# Why?
+## Why use this plugin?
 
 There are various reasons, some better than others, why you might want to be able to run an expression when an element is removed from the DOM. For example:
 
@@ -38,7 +38,7 @@ There are various reasons, some better than others, why you might want to be abl
 
 ## Documentation
 
-Within a `data-on-remove` expression, you have access to the following special variables:
+The `data-on-remove` attribute runs [Datastar expressions](https://data-star.dev/guide/datastar_expressions) when the element it is attached to is removed from the DOM. Within these expressions, you have access to the following special variables:
 
 - `el`; the element that the `data-on-remove` attribute was attached to. 
 - `parent`; the element that was the parent of the removed node.
@@ -55,6 +55,12 @@ For example:
   </button>
 <section>
 ```
-When the button is clicked, this will log `{ el: button, parent: section }` to the console. Since the expression is executed _after_ the element has already been removed from the DOM, you cannot access the parent via `el.parentElement`, so it is provided for you by the plugin.
+When the button is clicked, this will log `{ el: button, parent: section }` to the console.
 
-You can view live examples here: https://threadgold.nz/demos/data-on-remove 
+> Since the expression is executed _after_ the element has already been removed from the DOM, you cannot access the parent via `el.parentElement`, so it is provided for you by the plugin.
+
+[View live demo examples here](https://threadgold.nz/demos/data-on-remove)
+
+## License
+
+MIT
