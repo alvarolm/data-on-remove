@@ -41,9 +41,9 @@ There are various reasons, some better than others, why you might want to be abl
 The `data-on-remove` attribute runs [Datastar expressions](https://data-star.dev/guide/datastar_expressions) when the element it is attached to is removed from the DOM. Within these expressions, you have access to the following special variables:
 
 - `el`; the element that the `data-on-remove` attribute was attached to. 
-- `parent`; the element that was the parent of the removed node.
+- `parent`; the element that was the parent of the removed node
 
-For example:
+### Example
 
 ```html
 <section>
@@ -58,6 +58,8 @@ For example:
 When the button is clicked, this will log `{ el: button, parent: section }` to the console.
 
 > Since the expression is executed _after_ the element has already been removed from the DOM, you cannot access the parent via `el.parentElement`, so it is provided for you by the plugin.
+
+If the `data-on-remove` attribute is removed from the element prior to the element itself being removed, then the expression will not run.
 
 [View live demo examples here](https://threadgold.nz/demos/data-on-remove)
 
